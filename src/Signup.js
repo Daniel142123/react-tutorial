@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 export function Signup() {
       const handleSubmit = (e) => {
         e.preventDefault();
-        const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         const confirmPassword = e.target.confirm_password.value;
@@ -11,7 +10,7 @@ export function Signup() {
           console.log('Passwords do not match');
           return;
         }
-        console.log('Sign-up attempt:', { name, email, password });
+        console.log('Sign-up attempt:', { email, password });
         // Add your sign-up logic here
       };
 
